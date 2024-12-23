@@ -1,0 +1,51 @@
+hp@DESKTOP-MVQD6P2 MINGW64 /
+$ cd d
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d
+$ mkdir narayana
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d
+$ cd narayana
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ touch index.html
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ notepad index.html
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ touch dockerfile
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ notepad dockerfile
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ docker build -t narayana .
+[+] Building 7.8s (8/8) FINISHED                           docker:desktop-linux
+ => [internal] load build definition from dockerfile                       0.2s
+ => => transferring dockerfile: 396B                                       0.1s
+ => [internal] load metadata for docker.io/library/nginx:alpine            6.5s
+ => [auth] library/nginx:pull token for registry-1.docker.io               0.0s
+ => [internal] load .dockerignore                                          0.1s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load build context                                          0.2s
+ => => transferring context: 376B                                          0.1s
+ => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:41523187cf7d7  0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html/                           0.2s
+ => exporting to image                                                     0.2s
+ => => exporting layers                                                    0.1s
+ => => writing image sha256:ac4d459e06a547915edfab4935080f279ac0ecb0f271d  0.0s
+ => => naming to docker.io/library/narayana                                0.0s
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ docker run -d -p 8080:80 narayana
+5782fdac72a5b8f291b11193513d48e46954b8c0f78faa07a68ceb4474d750a4
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ docker ps
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS          PORTS                  NAMES
+5782fdac72a5   narayana   "/docker-entrypoint.…"   14 seconds ago   Up 13 seconds   0.0.0.0:8080->80/tcp   hungry_engelbart
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/narayana
+$ http://localhost:8080
+bash: http://localhost:8080: No such file or directory
