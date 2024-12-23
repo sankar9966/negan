@@ -1,0 +1,54 @@
+ mkdir rick
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d
+$ cd rick
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick
+$ pwd
+/d/rick
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick
+$ mkdir rick
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick
+$ cd rick
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick
+$ pwd
+/d/rick/rick
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick
+$ notepad file9.txt
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick
+$ git init
+Initialized empty Git repository in D:/rick/rick/.git/
+g
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick (master)
+$ git add file9.txt
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick (master)
+$ git config --global user.name "sankar9966"
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick (master)
+$ git config --global user.email "kadirisankarnarayana5085.sse@saveetha.com"
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick (master)
+$ git commit -m "ssss"
+[master (root-commit) 13c464d] ssss
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file9.txt
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick (master)
+$ git remote add origin https://github.com/sankar9966/rick.git
+
+hp@DESKTOP-MVQD6P2 MINGW64 /d/rick/rick (master)
+$ git branch -m main
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 224 bytes | 74.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/sankar9966/rick.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
